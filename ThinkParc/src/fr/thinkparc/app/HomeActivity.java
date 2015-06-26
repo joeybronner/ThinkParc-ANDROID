@@ -3,7 +3,6 @@ package fr.thinkparc.app;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -24,7 +23,6 @@ import fr.thinkparc.util.Utilities;
 
 public class HomeActivity extends Activity implements OnItemClickListener {
 
-	private String _errormsg;
 	GridView gridview;
 
 	@Override
@@ -36,9 +34,6 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		gridview = (GridView) HomeActivity.this.findViewById(R.id.dashboard_grid);
 		gridview.setAdapter(new ImageAdapter(this));
 		gridview.setOnItemClickListener(this);
-		
-		// TypeFace Font Awesome (icons)
-		Typeface fa = Typeface.createFromAsset(getAssets(), "FontAwesome/fontawesome-webfont.ttf");
 		
 		// Hide Action Bar
 		getActionBar().hide();
@@ -52,6 +47,7 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		});
 	}
 
+	@Override
 	public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 		// Here, redirect to the good view
 		String icon_selected = ICONS[position].map;

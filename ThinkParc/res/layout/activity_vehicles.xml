@@ -8,5 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.thinkparc.subparts.VehiclesActivity" >
 
+    <EditText
+        android:id="@+id/etResponse"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textMultiLine" >
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

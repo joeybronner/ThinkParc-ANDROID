@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/think_parc_home_4"
+    tools:context="fr.thinkparc.app.AuthenticationActivity" >
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:hint="@string/login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="@string/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etLogin"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btConnect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:onClick="login"
+        android:text="@string/connect" />
+
+</RelativeLayout>
