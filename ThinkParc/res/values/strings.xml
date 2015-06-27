@@ -10,6 +10,7 @@
     <string name="loading">Loading&#8230;</string>
     
     <!-- Authentication view -->
+    <string name="authentication">Think-Parc | Authentication</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="connect">Connect</string>

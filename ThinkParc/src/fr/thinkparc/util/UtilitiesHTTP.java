@@ -26,7 +26,7 @@ public class UtilitiesHTTP {
 
 	/* For HTTP Methods */
 	public static String convertInputStreamToString(InputStream is) 
-			throws IOException{
+			throws IOException {
 		BufferedReader bufferedReader;
 		bufferedReader = new BufferedReader(new InputStreamReader(is));
 		String line = "";
