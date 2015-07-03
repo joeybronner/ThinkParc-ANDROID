@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import fr.thinkparc.util.Constants;
 import fr.thinkparc.util.UtilitiesHTTP;
 
 public class AuthenticationActivity extends Activity {
@@ -72,6 +73,16 @@ public class AuthenticationActivity extends Activity {
 				String access = r.getString("access");
 				String token = r.getString("token");
 				if (access.equals("success")) {
+					/* Store user's values as Constants */
+					Constants.ID_COMPANY = r.getString("id_company");
+					Constants.ID_ROLE = r.getString("id_role");
+					Constants.ID_USER = r.getString("id_user");
+					Constants.FIRSTNAME = r.getString("firstname");
+					Constants.LASTNAME = r.getString("lastname");
+					Constants.LOGIN = r.getString("login");
+					Constants.EMAIL = r.getString("email");
+					Constants.IMAGE = r.getString("image");
+					
 					Intent intent = new Intent(AuthenticationActivity.this, HomeActivity.class);
 					startActivity(intent);
 					progressDialog.dismiss();

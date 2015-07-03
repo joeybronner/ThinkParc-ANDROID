@@ -1,21 +1,108 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="fr.thinkparc.subparts.VehiclesActivity" >
+    android:fillViewport="true" >
 
-    <EditText
-        android:id="@+id/etResponse"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:inputType="textMultiLine" >
-        <requestFocus />
-    </EditText>
+        android:layout_height="match_parent"
+        android:background="@drawable/think_parc_vehicles_4"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="fr.thinkparc.subparts.VehiclesActivity" >
 
-</RelativeLayout>
+        <!-- Plate number -->
+        <TextView
+            android:id="@+id/tvPlateNr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/black_transparancy"
+            android:gravity="center"
+            android:text="Select a vehicle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerVehicles"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tvPlateNr"
+            android:background="@color/white_transparency" />
+
+        <!-- Serial number -->
+        <TextView
+            android:id="@+id/tvSerialNr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerVehicles"
+            android:background="@color/black_transparancy"
+            android:gravity="center"
+            android:text="Serial number"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSerialNr_val"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvSerialNr"
+            android:background="@color/black_transparancy"
+            android:text="876876 767 676"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <!-- Buying date -->
+        <TextView
+            android:id="@+id/tvBuyingDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSerialNr_val"
+            android:background="@color/black_transparancy"
+            android:gravity="center"
+            android:text="Buying date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBuyingDate_val"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvBuyingDate"
+            android:background="@color/black_transparancy"
+            android:text="JJ/MM/AAAA"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <!-- First circulation date -->
+        <TextView
+            android:id="@+id/tvCirculationDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBuyingDate_val"
+            android:background="@color/black_transparancy"
+            android:gravity="center"
+            android:text="First circulation date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCirculationDate_val"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvCirculationDate"
+            android:background="@color/black_transparancy"
+            android:text="JJ/MM/AAAA"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</ScrollView>
