@@ -15,17 +15,14 @@
         tools:context="fr.thinkparc.subparts.VehiclesActivity" >
 
         <!-- Plate number -->
+
         <TextView
             android:id="@+id/tvPlateNr"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:background="@color/black_transparancy"
-            android:gravity="center"
             android:text="Select a vehicle"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            style="@style/tvStyleTitle" />
 
         <Spinner
             android:id="@+id/spinnerVehicles"
@@ -36,73 +33,58 @@
             android:background="@color/white_transparency" />
 
         <!-- Serial number -->
+        
         <TextView
             android:id="@+id/tvSerialNr"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/spinnerVehicles"
-            android:background="@color/black_transparancy"
-            android:gravity="center"
             android:text="Serial number"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            style="@style/tvStyleTitle" />
 
         <TextView
             android:id="@+id/tvSerialNr_val"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvSerialNr"
-            android:background="@color/black_transparancy"
-            android:text="876876 767 676"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
+            android:text="-"
+            style="@style/tvStyleValues" />
 
         <!-- Buying date -->
+
         <TextView
             android:id="@+id/tvBuyingDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvSerialNr_val"
-            android:background="@color/black_transparancy"
-            android:gravity="center"
             android:text="Buying date"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            style="@style/tvStyleTitle" />
 
         <TextView
             android:id="@+id/tvBuyingDate_val"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvBuyingDate"
-            android:background="@color/black_transparancy"
             android:text="JJ/MM/AAAA"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
+            style="@style/tvStyleValues" />
 
         <!-- First circulation date -->
+
         <TextView
             android:id="@+id/tvCirculationDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvBuyingDate_val"
-            android:background="@color/black_transparancy"
-            android:gravity="center"
             android:text="First circulation date"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            style="@style/tvStyleTitle" />
 
         <TextView
             android:id="@+id/tvCirculationDate_val"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvCirculationDate"
-            android:background="@color/black_transparancy"
             android:text="JJ/MM/AAAA"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
+            style="@style/tvStyleValues" />
     </RelativeLayout>
 
 </ScrollView>
