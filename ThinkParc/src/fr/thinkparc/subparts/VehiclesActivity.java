@@ -33,6 +33,16 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 	TextView tvSerialNr_val;
 	TextView tvBuyingDate_val;
 	TextView tvCirculationDate_val;
+	TextView tvBrand_val;
+	TextView tvModel_val;
+	TextView tvMileage_val;
+	TextView tvEnergy_val;
+	TextView tvState_val;
+	TextView tvCategory_val;
+	TextView tvBuyingPrice_val;
+	TextView tvEquipments_val;
+	TextView tvSite_val;
+	TextView tvCommentary_val;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +54,16 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 		tvSerialNr_val = (TextView) findViewById(R.id.tvSerialNr_val);
 		tvBuyingDate_val = (TextView) findViewById(R.id.tvBuyingDate_val);
 		tvCirculationDate_val = (TextView) findViewById(R.id.tvCirculationDate_val);
+		tvBrand_val = (TextView) findViewById(R.id.tvBrand_val);
+		tvModel_val = (TextView) findViewById(R.id.tvModel_val);
+		tvMileage_val = (TextView) findViewById(R.id.tvMileage_val);
+		tvEnergy_val = (TextView) findViewById(R.id.tvEnergy_val);
+		tvState_val = (TextView) findViewById(R.id.tvState_val);
+		tvCategory_val = (TextView) findViewById(R.id.tvCategory_val);
+		tvBuyingPrice_val = (TextView) findViewById(R.id.tvBuyingPrice_val);
+		tvEquipments_val = (TextView) findViewById(R.id.tvEquipments_val);
+		tvSite_val = (TextView) findViewById(R.id.tvSite_val);
+		tvCommentary_val = (TextView) findViewById(R.id.tvCommentary_val);
 		
 		// Spinner click listener
 		spinnerVehicles.setOnItemSelectedListener(this);
@@ -62,8 +82,18 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
         
         // Set vehicle values
         tvSerialNr_val.setText(v.getNr_serial());
-        tvBuyingDate_val.setText(v.getBuyingprice());
+        tvBuyingDate_val.setText(v.getDate_buy());
         tvCirculationDate_val.setText(v.getDate_entryservice());
+        tvBrand_val.setText(v.getBrand());
+        tvModel_val.setText(v.getModel());
+        tvMileage_val.setText(v.getMileage());
+        tvEnergy_val.setText(v.getEnergy());
+        tvState_val.setText(v.getState());
+        tvCategory_val.setText(v.getCategory());
+        tvBuyingPrice_val.setText(v.getBuyingprice() + " " + v.getSymbol());
+        tvEquipments_val.setText(v.getEquipments());
+        tvSite_val.setText(v.getSite());
+        tvCommentary_val.setText(v.getCommentary());
     }
 	
 	@Override
@@ -79,8 +109,19 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 		    Vehicle v = new Vehicle();
 		    v.setNr_plate(jsonobject.getString("nr_plate"));
 		    v.setNr_serial(jsonobject.getString("nr_serial"));
-		    v.setBuyingprice(jsonobject.getString("date_buy"));
+		    v.setDate_buy(jsonobject.getString("date_buy"));
 		    v.setDate_entryservice(jsonobject.getString("date_entryservice"));
+		    v.setBrand(jsonobject.getString("brand"));
+		    v.setModel(jsonobject.getString("model"));
+		    v.setMileage(jsonobject.getString("mileage"));
+		    v.setEnergy(jsonobject.getString("energy"));
+		    v.setState(jsonobject.getString("state"));
+		    v.setCategory(jsonobject.getString("category"));
+		    v.setBuyingprice(jsonobject.getString("buyingprice"));
+		    v.setSymbol(jsonobject.getString("symbol"));
+		    v.setEquipments(jsonobject.getString("equipments"));
+		    v.setSite(jsonobject.getString("name"));
+		    v.setCommentary(jsonobject.getString("commentary"));
 		    vehicles.add(v);
 		}
 

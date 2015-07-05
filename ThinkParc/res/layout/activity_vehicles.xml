@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/think_parc_vehicles_4"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -18,11 +18,11 @@
 
         <TextView
             android:id="@+id/tvPlateNr"
+            style="@style/tvStyleTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:text="Select a vehicle"
-            style="@style/tvStyleTitle" />
+            android:text="@string/title_selectvehicle" />
 
         <Spinner
             android:id="@+id/spinnerVehicles"
@@ -33,58 +33,238 @@
             android:background="@color/white_transparency" />
 
         <!-- Serial number -->
-        
+
         <TextView
             android:id="@+id/tvSerialNr"
+            style="@style/tvStyleTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/spinnerVehicles"
-            android:text="Serial number"
-            style="@style/tvStyleTitle" />
+            android:text="@string/title_serialnumber" />
 
         <TextView
             android:id="@+id/tvSerialNr_val"
+            style="@style/tvStyleValues"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvSerialNr"
-            android:text="-"
-            style="@style/tvStyleValues" />
+            android:text="@string/no_values" />
 
         <!-- Buying date -->
 
         <TextView
             android:id="@+id/tvBuyingDate"
+            style="@style/tvStyleTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvSerialNr_val"
-            android:text="Buying date"
-            style="@style/tvStyleTitle" />
+            android:text="@string/title_buyingdate" />
 
         <TextView
             android:id="@+id/tvBuyingDate_val"
+            style="@style/tvStyleValues"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvBuyingDate"
-            android:text="JJ/MM/AAAA"
-            style="@style/tvStyleValues" />
+            android:text="@string/date_pattern" />
 
         <!-- First circulation date -->
 
         <TextView
             android:id="@+id/tvCirculationDate"
+            style="@style/tvStyleTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvBuyingDate_val"
-            android:text="First circulation date"
-            style="@style/tvStyleTitle" />
+            android:text="@string/title_circulationdate" />
 
         <TextView
             android:id="@+id/tvCirculationDate_val"
+            style="@style/tvStyleValues"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/tv_height"
             android:layout_below="@id/tvCirculationDate"
-            android:text="JJ/MM/AAAA"
-            style="@style/tvStyleValues" />
+            android:text="@string/date_pattern" />
+
+        <!-- Brand -->
+
+        <TextView
+            android:id="@+id/tvBrand"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCirculationDate_val"
+            android:text="@string/title_brand" />
+
+        <TextView
+            android:id="@+id/tvBrand_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvBrand"
+            android:text="@string/no_values" />
+
+        <!-- Model -->
+
+        <TextView
+            android:id="@+id/tvModel"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBrand_val"
+            android:text="@string/title_model" />
+
+        <TextView
+            android:id="@+id/tvModel_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvModel"
+            android:text="@string/no_values" />
+
+        <!-- Mileage -->
+
+        <TextView
+            android:id="@+id/tvMileage"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvModel_val"
+            android:text="@string/title_mileage" />
+
+        <TextView
+            android:id="@+id/tvMileage_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvMileage"
+            android:text="@string/no_values" />
+
+        <!-- Energy -->
+
+        <TextView
+            android:id="@+id/tvEnergy"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMileage_val"
+            android:text="@string/title_energy" />
+
+        <TextView
+            android:id="@+id/tvEnergy_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvEnergy"
+            android:text="@string/no_values" />
+
+        <!-- State -->
+
+        <TextView
+            android:id="@+id/tvState"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEnergy_val"
+            android:text="@string/title_state" />
+
+        <TextView
+            android:id="@+id/tvState_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvState"
+            android:text="@string/no_values" />
+
+        <!-- Category -->
+
+        <TextView
+            android:id="@+id/tvCategory"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvState_val"
+            android:text="@string/title_category" />
+
+        <TextView
+            android:id="@+id/tvCategory_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvCategory"
+            android:text="@string/no_values" />
+
+        <!-- Buyingprice -->
+
+        <TextView
+            android:id="@+id/tvBuyingPrice"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCategory_val"
+            android:text="@string/title_buyingprice" />
+
+        <TextView
+            android:id="@+id/tvBuyingPrice_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvBuyingPrice"
+            android:text="@string/no_values" />
+
+        <!-- Equipments -->
+
+        <TextView
+            android:id="@+id/tvEquipments"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBuyingPrice_val"
+            android:text="@string/title_equipments" />
+
+        <TextView
+            android:id="@+id/tvEquipments_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvEquipments"
+            android:text="@string/no_values" />
+
+        <!-- Site -->
+
+        <TextView
+            android:id="@+id/tvSite"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEquipments_val"
+            android:text="@string/title_site" />
+
+        <TextView
+            android:id="@+id/tvSite_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tv_height"
+            android:layout_below="@id/tvSite"
+            android:text="@string/no_values" />
+
+        <!-- Commentary -->
+
+        <TextView
+            android:id="@+id/tvCommentary"
+            style="@style/tvStyleTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSite_val"
+            android:text="@string/title_commentary" />
+
+        <TextView
+            android:id="@+id/tvCommentary_val"
+            style="@style/tvStyleValues"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCommentary"
+            android:text="@string/no_values" />
     </RelativeLayout>
 
 </ScrollView>

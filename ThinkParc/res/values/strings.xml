@@ -8,6 +8,8 @@
     
     <!-- Global -->
     <string name="loading">Loading&#8230;</string>
+    <string name="no_values">-</string>
+    <string name="date_pattern">DD/MM/YYYY</string>
     
     <!-- Authentication view -->
     <string name="authentication">Think-Parc | Authentication</string>
@@ -28,7 +30,24 @@
 
     <!-- Menu VehiclesActivity -->
     <string name="action_gotowebsite">Open website in browser</string>
-    <string name="title_activity_vehicles">VehiclesActivity</string>
+    <string name="title_activity_vehicles">Vehicles</string>
+    <string name="title_selectvehicle">Select a vehicle</string>
+    <string name="title_serialnumber">Serial number</string>
+    <string name="title_buyingdate">Buying date</string>
+    <string name="title_circulationdate">First circulation date</string>
+    <string name="title_brand">Brand</string>
+    <string name="title_model">Model</string>
+    <string name="title_mileage">Mileage</string>
+    <string name="title_energy">Energy</string>
+    <string name="title_state">State</string>
+    <string name="title_category">Category</string>
+    <string name="title_buyingprice">Buying price</string>
+    <string name="title_equipments">Equipments</string>
+    <string name="title_site">Site</string>
+    <string name="title_commentary">Commentary</string>
+    
+    
+    
     <string name="title_activity_login">LoginActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
