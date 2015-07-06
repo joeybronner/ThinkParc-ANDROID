@@ -32,6 +32,15 @@ public class Utilities {
 		intent.putExtra("quantity", String.valueOf(qt));
 		c.startActivity(intent);
 	}
+	
+	public static String getExtensionFile(String path) {
+		int i = path.lastIndexOf('.');
+		if (i > 0) {
+		    return path.substring(i+1);
+		} else {
+			return "";
+		}
+	}
 
 }
 

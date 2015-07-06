@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -114,7 +115,6 @@ public class MaintenanceSiteActivity extends Activity {
 		
 		builder.setView(dialoglayout);
 		builder.setCancelable(false);
-		//builder.show();
 		
 		// Close after X seconds
 		final AlertDialog success = builder.create();
@@ -153,6 +153,13 @@ public class MaintenanceSiteActivity extends Activity {
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+		ProgressDialog progressDialog;
+		
+		@Override
+		protected void onPreExecute() {
+			progressDialog = ProgressDialog.show(MaintenanceSiteActivity.this, null, getResources().getString(R.string.loading), true, false);
+		}
+		
 		@Override
 		protected String doInBackground(String... urls) {
 			switch (choice) {
@@ -189,7 +196,9 @@ public class MaintenanceSiteActivity extends Activity {
 					showSuccess();
 					break;
 				}
+				progressDialog.dismiss();
 			} catch (JSONException e) {
+				progressDialog.dismiss();
 				e.printStackTrace();
 			}
 		}

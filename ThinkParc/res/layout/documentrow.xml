@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:background="@color/black_transparancy" >
+
+    <TableRow>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/ivTypeFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facubes" />
+
+        </LinearLayout>
+        
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp" >
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvFile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:text="Mon document"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </TableRow>
+        </TableLayout>
+    </TableRow>
+</TableLayout>

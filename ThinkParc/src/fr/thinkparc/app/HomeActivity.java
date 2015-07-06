@@ -9,15 +9,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import fr.thinkparc.subparts.documents.DocumentsActivity;
 import fr.thinkparc.subparts.maintenance.MaintenanceActivity;
 import fr.thinkparc.subparts.vehicles.VehiclesActivity;
 import fr.thinkparc.util.LaunchApp;
@@ -27,6 +30,7 @@ import fr.thinkparc.util.Utilities;
 public class HomeActivity extends Activity implements OnItemClickListener {
 
 	GridView gridview;
+	ImageButton ibLogoff;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -48,6 +52,20 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 				return event.getAction() == MotionEvent.ACTION_MOVE;
 			}
 		});
+		
+		// Listener on Logoff button
+		ibLogoff = (ImageButton) findViewById(R.id.imLogoff);
+		ibLogoff.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Utilities.openView(HomeActivity.this, AuthenticationActivity.class);
+			}
+		});
+	}
+	
+	@Override
+	public void onBackPressed() {
+		Toast.makeText(this, getResources().getString(R.string.backpress_logoff), Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
@@ -55,7 +73,7 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		// Here, redirect to the good view
 		String icon_selected = ICONS[position].map;
 		if (icon_selected.equals("stock")) {
-			// Here, open activity
+			// Here, open activity for stocks
 		}
 		else if (icon_selected.equals("vehicles")) {
 			Utilities.openView(this, VehiclesActivity.class);
@@ -63,8 +81,8 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		else if (icon_selected.equals("maintenance")) {
 			Utilities.openView(this, MaintenanceActivity.class);
 		}
-		else if (icon_selected.equals("reporting")) {
-			// Here, open activity
+		else if (icon_selected.equals("documents")) {
+			Utilities.openView(this, DocumentsActivity.class);
 		}
 		else if (icon_selected.equals("webbrowser")) {
 			// Redirect to browser
@@ -84,7 +102,7 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		new LauncherIcon(R.drawable.facubes, LaunchApp.stock, "stock"),
 		new LauncherIcon(R.drawable.facar, LaunchApp.vehicles, "vehicles"),
 		new LauncherIcon(R.drawable.fawrench, LaunchApp.maintenance, "maintenance"),
-		new LauncherIcon(R.drawable.fasignal, LaunchApp.reporting, "reporting"),
+		new LauncherIcon(R.drawable.fafile, LaunchApp.documents, "documents"),
 		new LauncherIcon(R.drawable.falaptop, LaunchApp.webbrowser, "webbrowser"),
 	};
 

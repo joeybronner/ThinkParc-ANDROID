@@ -3,7 +3,7 @@
 
     <string name="app_name">ThinkParc</string>
     <string name="title_activity_splash_screen">ThinkParc</string>
-    <string name="website">http://www.think-parc.com</string>
+    <string name="website"><u>http://www.think-parc.com</u></string>
     <string name="type_software">Android Application</string>
 
     <!-- Global -->
@@ -27,8 +27,9 @@
     <string name="stock">Stock</string>
     <string name="vehicles">Vehicles</string>
     <string name="maintenance">Maintenance</string>
-    <string name="reporting">Reporting</string>
+    <string name="documents">Documents</string>
     <string name="webbrowser">Open in browser</string>
+    <string name="backpress_logoff">Please use the right bottom button to logogg.</string>
 
     <!-- Vehicles Activity -->
     <string name="action_gotowebsite">Open website in browser</string>
@@ -57,8 +58,11 @@
     <string name="title_activity_maintenance_stock">Pick a reference</string>
     <string name="title_activity_maintenance_site">Pick a location</string>
     <string name="quantity">Quantity</string>
-    
+
     <!-- Success view -->
     <string name="success">Success!</string>
+    
+    <!-- Documents Activity -->
+    <string name="title_activity_documents">Documents</string>
 
 </resources>

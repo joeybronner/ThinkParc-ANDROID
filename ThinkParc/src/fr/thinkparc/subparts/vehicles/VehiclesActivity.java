@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
@@ -134,6 +135,13 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+		ProgressDialog progressDialog;
+		
+		@Override
+		protected void onPreExecute() {
+			progressDialog = ProgressDialog.show(VehiclesActivity.this, null, getResources().getString(R.string.loading), true, false);
+		}
+		
 		@Override
 		protected String doInBackground(String... urls) {
 			return UtilitiesHTTP.GET(urls[0]);
@@ -142,7 +150,9 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 		protected void onPostExecute(String result) {
 			try {
 				getAllVehicles(result);
+				progressDialog.dismiss();
 			} catch (JSONException e) {
+				progressDialog.dismiss();
 				e.printStackTrace();
 			}
 		}

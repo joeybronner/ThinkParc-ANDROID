@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,9 +76,11 @@ public class CustomAdapter extends BaseAdapter implements OnClickListener {
 			holder = (ViewHolder)stockrow.getTag();
 
 		if(data.size()<=0) {
-			holder.tvSiteName.setText("No Data");
-		}
-		else {
+			holder.tvQuantity.setText("0");
+			holder.tvQuantity.setTextColor(Color.parseColor("#A82A2A"));
+			holder.tvSiteName.setText("No parts available");
+			holder.tvLocalisation.setText("");
+		} else {
 			stockElement = null;
 			stockElement = (StockElements) data.get(position);
 

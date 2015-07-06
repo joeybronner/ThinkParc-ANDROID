@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
 
     <application
         android:name="fr.thinkparc.util.LaunchApp"
@@ -68,6 +69,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.thinkparc.subparts.maintenance.MaintenanceStockActivity" />
+        </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.documents.DocumentsActivity"
+            android:label="@string/title_activity_documents"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.app.HomeActivity" />
         </activity>
     </application>
 

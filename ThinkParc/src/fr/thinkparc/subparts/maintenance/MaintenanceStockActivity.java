@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -121,6 +122,13 @@ public class MaintenanceStockActivity extends ListActivity {
 	}
 	
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+		ProgressDialog progressDialog;
+		
+		@Override
+		protected void onPreExecute() {
+			progressDialog = ProgressDialog.show(MaintenanceStockActivity.this, null, getResources().getString(R.string.loading), true, false);
+		}
+		
 		@Override
 		protected String doInBackground(String... urls) {
 			return UtilitiesHTTP.GET(urls[0]);
@@ -129,6 +137,7 @@ public class MaintenanceStockActivity extends ListActivity {
 		protected void onPostExecute(String result) {
 			try {
 				getAllReferences(result);
+				progressDialog.dismiss();
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}

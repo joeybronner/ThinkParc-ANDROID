@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
@@ -81,6 +82,13 @@ public class MaintenanceActivity extends ListActivity {
 	}
 	
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+		ProgressDialog progressDialog;
+		
+		@Override
+		protected void onPreExecute() {
+			progressDialog = ProgressDialog.show(MaintenanceActivity.this, null, getResources().getString(R.string.loading), true, false);
+		}
+		
 		@Override
 		protected String doInBackground(String... urls) {
 			return UtilitiesHTTP.GET(urls[0]);
@@ -89,7 +97,9 @@ public class MaintenanceActivity extends ListActivity {
 		protected void onPostExecute(String result) {
 			try {
 				getAllVehiclesInMaintenance(result);
+				progressDialog.dismiss();
 			} catch (JSONException e) {
+				progressDialog.dismiss();
 				e.printStackTrace();
 			}
 		}

@@ -9,7 +9,7 @@ public class LaunchApp extends Application {
 	public static String stock;
 	public static String vehicles;
 	public static String maintenance;
-	public static String reporting;
+	public static String documents;
 	public static String webbrowser;
 
 	@Override
@@ -20,7 +20,7 @@ public class LaunchApp extends Application {
 		stock = getString(R.string.stock);
 		vehicles = getString(R.string.vehicles);
 		maintenance = getString(R.string.maintenance);
-		reporting = getString(R.string.reporting);
+		documents = getString(R.string.documents);
 		webbrowser = getString(R.string.webbrowser);
 	}
 
