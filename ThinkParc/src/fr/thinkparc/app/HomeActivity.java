@@ -3,6 +3,8 @@ package fr.thinkparc.app;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -65,7 +67,10 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 			// Here, open activity
 		}
 		else if (icon_selected.equals("webbrowser")) {
-			// Here, open activity
+			// Redirect to browser
+			Intent httpIntent = new Intent(Intent.ACTION_VIEW);
+			httpIntent.setData(Uri.parse("http://www.think-parc.com"));
+			startActivity(httpIntent);   
 		}
 		else {
 			Toast toast = Toast.makeText(this,"Error msg", Toast.LENGTH_LONG);

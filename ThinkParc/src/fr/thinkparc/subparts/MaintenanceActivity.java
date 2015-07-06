@@ -33,7 +33,6 @@ public class MaintenanceActivity extends ListActivity {
 
 		// Here, load all vehicles in maintenance
 		if(UtilitiesHTTP.isConnected((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))){
-			// call AsynTask to perform network operation on separate thread
 			new HttpAsyncTask().execute("http://think-parc.com/webservice/v1/companies/" + Constants.ID_COMPANY +  "/maintenance/vehiclesundermaintenance");
 		}
 	}

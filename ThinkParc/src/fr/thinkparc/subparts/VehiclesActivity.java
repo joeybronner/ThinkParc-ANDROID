@@ -12,8 +12,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -149,24 +147,4 @@ public class VehiclesActivity extends Activity implements OnItemSelectedListener
 			}
 		}
 	}
-
-
-	/*
-	 * ActionBar elements
-	 */
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.vehicles, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_gotowebsite) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
 }
