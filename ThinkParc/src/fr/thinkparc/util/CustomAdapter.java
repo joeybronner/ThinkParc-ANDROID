@@ -14,7 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import fr.thinkparc.app.R;
 import fr.thinkparc.obj.StockElements;
-import fr.thinkparc.subparts.MaintenanceSiteActivity;
+import fr.thinkparc.subparts.maintenance.MaintenanceSiteActivity;
 
 public class CustomAdapter extends BaseAdapter implements OnClickListener {
 

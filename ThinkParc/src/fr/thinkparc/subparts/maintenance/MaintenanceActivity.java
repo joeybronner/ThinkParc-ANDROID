@@ -1,4 +1,4 @@
-package fr.thinkparc.subparts;
+package fr.thinkparc.subparts.maintenance;
 
 import java.util.ArrayList;
 

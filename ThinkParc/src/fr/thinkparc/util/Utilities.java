@@ -29,7 +29,7 @@ public class Utilities {
 		Intent intent = new Intent(c, cla);
 		intent.putExtra("id_vehicle", id_vehicle);
 		intent.putExtra("reference", reference);
-		intent.putExtra("quantity", qt);
+		intent.putExtra("quantity", String.valueOf(qt));
 		c.startActivity(intent);
 	}
 

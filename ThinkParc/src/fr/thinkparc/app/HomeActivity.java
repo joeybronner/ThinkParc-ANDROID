@@ -18,8 +18,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import fr.thinkparc.subparts.MaintenanceActivity;
-import fr.thinkparc.subparts.VehiclesActivity;
+import fr.thinkparc.subparts.maintenance.MaintenanceActivity;
+import fr.thinkparc.subparts.vehicles.VehiclesActivity;
 import fr.thinkparc.util.LaunchApp;
 import fr.thinkparc.util.Utilities;
 

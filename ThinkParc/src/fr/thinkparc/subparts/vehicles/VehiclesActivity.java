@@ -1,4 +1,4 @@
-package fr.thinkparc.subparts;
+package fr.thinkparc.subparts.vehicles;
 
 import java.util.ArrayList;
 import java.util.List;

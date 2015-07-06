@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/think_parc_maintenance_3"
-    tools:context="fr.thinkparc.subparts.MaintenanceStockActivity" >
+    tools:context="fr.thinkparc.subparts.maintenance.MaintenanceStockActivity" >
 
     <ListView
         android:id="@android:id/list"

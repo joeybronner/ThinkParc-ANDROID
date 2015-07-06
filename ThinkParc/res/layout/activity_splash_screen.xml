@@ -45,6 +45,6 @@
         android:layout_below="@id/tvSoftwareName"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/logo_thinkparc" />
+        android:src="@drawable/logo_thinkparc_light" />
 
 </RelativeLayout>

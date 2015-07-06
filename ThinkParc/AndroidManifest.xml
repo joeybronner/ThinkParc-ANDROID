@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="fr.thinkparc.subparts.VehiclesActivity"
+            android:name="fr.thinkparc.subparts.vehicles.VehiclesActivity"
             android:label="@string/title_activity_vehicles"
             android:parentActivityName=".HomeActivity" >
             <meta-data
@@ -46,7 +46,7 @@
             android:label="@string/title_activity_authentication" >
         </activity>
         <activity
-            android:name="fr.thinkparc.subparts.MaintenanceActivity"
+            android:name="fr.thinkparc.subparts.maintenance.MaintenanceActivity"
             android:label="@string/title_activity_maintenance"
             android:parentActivityName=".HomeActivity" >
             <meta-data
@@ -54,20 +54,20 @@
                 android:value="fr.thinkparc.app.HomeActivity" />
         </activity>
         <activity
-            android:name="fr.thinkparc.subparts.MaintenanceStockActivity"
+            android:name="fr.thinkparc.subparts.maintenance.MaintenanceStockActivity"
             android:label="@string/title_activity_maintenance_stock"
-            android:parentActivityName="fr.thinkparc.subparts.MaintenanceActivity" >
+            android:parentActivityName="fr.thinkparc.subparts.maintenance.MaintenanceActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.thinkparc.subparts.MaintenanceActivity" />
+                android:value="fr.thinkparc.subparts.maintenance.MaintenanceActivity" />
         </activity>
         <activity
-            android:name="fr.thinkparc.subparts.MaintenanceSiteActivity"
+            android:name="fr.thinkparc.subparts.maintenance.MaintenanceSiteActivity"
             android:label="@string/title_activity_maintenance_site"
-            android:parentActivityName="fr.thinkparc.subparts.MaintenanceStockActivity" >
+            android:parentActivityName="fr.thinkparc.subparts.maintenance.MaintenanceStockActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.thinkparc.subparts.MaintenanceStockActivity" />
+                android:value="fr.thinkparc.subparts.maintenance.MaintenanceStockActivity" />
         </activity>
     </application>
 

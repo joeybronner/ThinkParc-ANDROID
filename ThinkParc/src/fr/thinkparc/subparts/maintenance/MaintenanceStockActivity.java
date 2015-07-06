@@ -1,4 +1,4 @@
-package fr.thinkparc.subparts;
+package fr.thinkparc.subparts.maintenance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +43,7 @@ public class MaintenanceStockActivity extends ListActivity {
 		Intent myIntent = getIntent();
 		id_vehicle = myIntent.getStringExtra("id_vehicle");
 		
-		// Here, load all vehicles in maintenance
+		// Here, load all parts (reference)
 		if(UtilitiesHTTP.isConnected((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))){
 			new HttpAsyncTask().execute("http://think-parc.com/webservice/v1/companies/" + Constants.ID_COMPANY + "/reporting/parts/all");
 		}

@@ -57,5 +57,8 @@
     <string name="title_activity_maintenance_stock">Pick a reference</string>
     <string name="title_activity_maintenance_site">Pick a location</string>
     <string name="quantity">Quantity</string>
+    
+    <!-- Success view -->
+    <string name="success">Success!</string>
 
 </resources>

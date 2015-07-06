@@ -2,6 +2,7 @@ package fr.thinkparc.obj;
 
 public class StockElements {
     
+	private String id_stock;
     private String siteName;
     private String quantity;
     private String rack;
@@ -10,6 +11,10 @@ public class StockElements {
      
     public void setSiteName(String siteName) {
         this.siteName = siteName;
+    }
+    
+    public void setIdStock(String id_stock) {
+        this.id_stock = id_stock;
     }
      
     public void setQuantity(String quantity) {
@@ -46,5 +51,9 @@ public class StockElements {
     
     public String getBay(){
         return this.bay;
+    }    
+    
+    public String getIdStock(){
+        return this.id_stock;
     }    
 }
