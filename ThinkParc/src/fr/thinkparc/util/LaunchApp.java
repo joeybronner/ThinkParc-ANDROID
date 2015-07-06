@@ -10,7 +10,7 @@ public class LaunchApp extends Application {
 	public static String vehicles;
 	public static String maintenance;
 	public static String reporting;
-	public static String settings;
+	public static String webbrowser;
 
 	@Override
 	public void onCreate() {
@@ -21,7 +21,7 @@ public class LaunchApp extends Application {
 		vehicles = getString(R.string.vehicles);
 		maintenance = getString(R.string.maintenance);
 		reporting = getString(R.string.reporting);
-		settings = getString(R.string.settings);
+		webbrowser = getString(R.string.webbrowser);
 	}
 
 }

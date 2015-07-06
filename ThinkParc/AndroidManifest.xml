@@ -45,6 +45,30 @@
             android:name=".AuthenticationActivity"
             android:label="@string/title_activity_authentication" >
         </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.MaintenanceActivity"
+            android:label="@string/title_activity_maintenance"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.app.HomeActivity" />
+        </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.MaintenanceStockActivity"
+            android:label="@string/title_activity_maintenance_stock"
+            android:parentActivityName="fr.thinkparc.subparts.MaintenanceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.subparts.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.MaintenanceSiteActivity"
+            android:label="@string/title_activity_maintenance_site"
+            android:parentActivityName="fr.thinkparc.subparts.MaintenanceStockActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.subparts.MaintenanceStockActivity" />
+        </activity>
     </application>
 
 </manifest>

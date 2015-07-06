@@ -19,24 +19,17 @@ public class Utilities {
 		c.startActivity(intent);
 	}
 	
-	public static void openView(Context c, Class<?> cla, String type) {
+	public static void openView(Context c, Class<?> cla, String id_vehicle) {
 		Intent intent = new Intent(c, cla);
-		intent.putExtra("type",type);
+		intent.putExtra("id_vehicle",id_vehicle);
 		c.startActivity(intent);
 	}
 	
-	public static void openView(Context c, Class<?> cla, String type, String line) {
+	public static void openView(Context c, Class<?> cla, String id_vehicle, String reference, int qt) {
 		Intent intent = new Intent(c, cla);
-		intent.putExtra("type",type);
-		intent.putExtra("line",line);
-		c.startActivity(intent);
-	}
-	
-	public static void openView(Context c, Class<?> cla, String type, String line, String station) {
-		Intent intent = new Intent(c, cla);
-		intent.putExtra("type",type);
-		intent.putExtra("line",line);
-		intent.putExtra("station",station);
+		intent.putExtra("id_vehicle", id_vehicle);
+		intent.putExtra("reference", reference);
+		intent.putExtra("quantity", qt);
 		c.startActivity(intent);
 	}
 

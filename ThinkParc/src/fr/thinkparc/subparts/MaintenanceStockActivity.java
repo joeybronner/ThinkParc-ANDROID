@@ -99,10 +99,10 @@ public class MaintenanceStockActivity extends ListActivity {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							EditText etQuantity = (EditText) promptView.findViewById(R.id.etQuantity);
-							String id_part = parts.get(position).getId_part();
+							String reference = parts.get(position).getReference();
 							int quantity = Integer.parseInt(etQuantity.getText().toString());
 							if (quantity > 0) {
-								Utilities.openView(MaintenanceStockActivity.this, MaintenanceSiteActivity.class, id_vehicle, id_part, quantity);
+								Utilities.openView(MaintenanceStockActivity.this, MaintenanceSiteActivity.class, id_vehicle, reference, quantity);
 							} else {
 								
 							}

@@ -16,6 +16,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import fr.thinkparc.subparts.MaintenanceActivity;
 import fr.thinkparc.subparts.VehiclesActivity;
 import fr.thinkparc.util.LaunchApp;
 import fr.thinkparc.util.Utilities;
@@ -58,12 +59,12 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 			Utilities.openView(this, VehiclesActivity.class);
 		}
 		else if (icon_selected.equals("maintenance")) {
-			// Here, open activity
+			Utilities.openView(this, MaintenanceActivity.class);
 		}
 		else if (icon_selected.equals("reporting")) {
 			// Here, open activity
 		}
-		else if (icon_selected.equals("settings")) {
+		else if (icon_selected.equals("webbrowser")) {
 			// Here, open activity
 		}
 		else {
@@ -79,7 +80,7 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		new LauncherIcon(R.drawable.facar, LaunchApp.vehicles, "vehicles"),
 		new LauncherIcon(R.drawable.fawrench, LaunchApp.maintenance, "maintenance"),
 		new LauncherIcon(R.drawable.fasignal, LaunchApp.reporting, "reporting"),
-		new LauncherIcon(R.drawable.fauser, LaunchApp.settings, "settings"),
+		new LauncherIcon(R.drawable.falaptop, LaunchApp.webbrowser, "webbrowser"),
 	};
 
 	static class LauncherIcon {
