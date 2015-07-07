@@ -1,5 +1,26 @@
 package fr.thinkparc.app;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		SplashActivity.java										*
+ * @description:	This activity is a splash screen. It's called on		*
+ * 					app launching for a moment.								*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

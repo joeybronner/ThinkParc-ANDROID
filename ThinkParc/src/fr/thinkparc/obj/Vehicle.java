@@ -1,5 +1,26 @@
 package fr.thinkparc.obj;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		AuthenticationActivity.java								*
+ * @description:	Vehicle is an object and stores all data about			*
+ * 					a vehicle (serial number, buying date, buying price,..) *
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 public class Vehicle {
 
 	protected String date_add;

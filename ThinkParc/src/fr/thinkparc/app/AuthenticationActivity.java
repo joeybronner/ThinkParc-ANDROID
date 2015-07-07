@@ -1,5 +1,27 @@
 package fr.thinkparc.app;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		AuthenticationActivity.java								*
+ * @description:	This activity asserts a connection between this app		*
+ * 					and the database to retrieve all data.					*
+ * 					User informations are stored as constants				*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import org.json.JSONException;
 import org.json.JSONObject;
 

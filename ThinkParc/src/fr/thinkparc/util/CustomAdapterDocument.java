@@ -1,5 +1,25 @@
 package fr.thinkparc.util;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		CustomAdapterDocument.java								*
+ * @description:	Adapter for a custom list view for listing documents	*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import java.util.ArrayList;
 
 import android.annotation.SuppressLint;

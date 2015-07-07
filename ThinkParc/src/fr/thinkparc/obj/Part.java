@@ -1,5 +1,25 @@
 package fr.thinkparc.obj;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		Part.java												*
+ * @description:	Part object to store reference values					*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 public class Part {
 
 	protected String id_part;

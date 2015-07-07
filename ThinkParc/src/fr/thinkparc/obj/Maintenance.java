@@ -1,5 +1,25 @@
 package fr.thinkparc.obj;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		Maintenance.java										*
+ * @description:	Maintenance object to define a maintenance vehicle		*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 public class Maintenance {
 
 	protected String id_vehicle;

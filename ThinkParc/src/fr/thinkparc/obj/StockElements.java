@@ -1,5 +1,26 @@
 package fr.thinkparc.obj;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		StockElements.java										*
+ * @description:	StockElements is an object and defines a localisation	*
+ * 					in the stock with a reference and a quantity			*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 public class StockElements {
     
 	private String id_stock;

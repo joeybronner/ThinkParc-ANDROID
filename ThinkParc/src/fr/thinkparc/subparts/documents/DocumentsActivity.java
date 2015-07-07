@@ -1,5 +1,26 @@
 package fr.thinkparc.subparts.documents;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		DocumentActivity.java									*
+ * @description:	This activity shows all the documents uploaded on the	*
+ * 					website. Here you can download each file.				*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import java.util.ArrayList;
 
 import org.json.JSONArray;

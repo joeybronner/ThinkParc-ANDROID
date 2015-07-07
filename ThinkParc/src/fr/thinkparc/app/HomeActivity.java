@@ -1,5 +1,26 @@
 package fr.thinkparc.app;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		HomeActivity.java										*
+ * @description:	This activity shows a dashboard of all modules 			*
+ * 					available in this app (stock, vehicles, ...)			*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;

@@ -1,5 +1,26 @@
 package fr.thinkparc.subparts.maintenance;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		MaintenanceActivity.java								*
+ * @description:	This activity allows a user to add some part on a		*
+ * 					current vehicle maintenance								*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import java.util.ArrayList;
 
 import org.json.JSONArray;

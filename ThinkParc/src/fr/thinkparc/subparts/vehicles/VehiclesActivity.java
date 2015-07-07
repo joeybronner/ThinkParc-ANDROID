@@ -1,5 +1,25 @@
 package fr.thinkparc.subparts.vehicles;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		VehiclesActivity.java									*
+ * @description:	This activity displays all vehicles data.				*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import java.util.ArrayList;
 import java.util.List;
 
