@@ -78,6 +78,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.thinkparc.app.HomeActivity" />
         </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.stock.StockActivity"
+            android:label="@string/title_activity_stock"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.app.HomeActivity" />
+        </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.stock.StockSearchActivity"
+            android:label="@string/title_activity_stock_search"
+            android:parentActivityName="fr.thinkparc.subparts.stock.StockActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.subparts.stock.StockActivity" />
+        </activity>
+        <activity
+            android:name="fr.thinkparc.subparts.stock.StockAddActivity"
+            android:label="@string/title_activity_stock_add"
+            android:parentActivityName="fr.thinkparc.subparts.stock.StockActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.thinkparc.subparts.stock.StockActivity" />
+        </activity>
     </application>
 
 </manifest>

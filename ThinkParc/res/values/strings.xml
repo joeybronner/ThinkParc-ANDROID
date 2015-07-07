@@ -61,8 +61,36 @@
 
     <!-- Success view -->
     <string name="success">Success!</string>
-    
+
     <!-- Documents Activity -->
     <string name="title_activity_documents">Documents</string>
+
+    <!-- Stock Activity -->
+    <string name="title_activity_stock">Stock Menu</string>
+    <string name="stock_addin">Add in stock</string>
+    <string name="stock_search">Search a reference</string>
+    <string name="title_activity_stock_search">Search reference</string>
+    <string name="title_activity_stock_add">Add in stock</string>
+    <string name="stock_choosereference">Choose a reference</string>
+    <string name="stock_quantity">Quantity</string>
+    <string name="stock_enterquantity">Enter a quantity</string>
+    <string name="stock_magasinnr">Magasin Nr</string>
+    <string name="stock_entermagasinnr">Enter a magasin nr</string>
+    <string name="stock_driveway">Driveway</string>
+    <string name="stock_enterdriveway">Enter the driveway</string>
+    <string name="stock_bay">Bay</string>
+    <string name="stock_enterbay">Enter the bay</string>
+    <string name="stock_rack">Rack</string>
+    <string name="stock_enterrack">Enter the rack</string>
+    <string name="stock_locker">Locker</string>
+    <string name="stock_enterlocker">Enter the locker</string>
+    <string name="stock_position">Position</string>
+    <string name="stock_enterposition">Enter the position</string>
+    <string name="stock_stockkind">Stock kind</string>
+    <string name="stock_storehouse">Store house</string>
+    <string name="stock_enterstorehouse">Enter the store house</string>
+    <string name="stock_site">Site</string>
+    <string name="stock_addinstock">Add in stock</string>
+    
 
 </resources>

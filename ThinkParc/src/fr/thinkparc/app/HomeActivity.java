@@ -43,6 +43,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import fr.thinkparc.subparts.documents.DocumentsActivity;
 import fr.thinkparc.subparts.maintenance.MaintenanceActivity;
+import fr.thinkparc.subparts.stock.StockActivity;
 import fr.thinkparc.subparts.vehicles.VehiclesActivity;
 import fr.thinkparc.util.LaunchApp;
 import fr.thinkparc.util.Utilities;
@@ -94,7 +95,7 @@ public class HomeActivity extends Activity implements OnItemClickListener {
 		// Here, redirect to the good view
 		String icon_selected = ICONS[position].map;
 		if (icon_selected.equals("stock")) {
-			// Here, open activity for stocks
+			Utilities.openView(this, StockActivity.class);
 		}
 		else if (icon_selected.equals("vehicles")) {
 			Utilities.openView(this, VehiclesActivity.class);

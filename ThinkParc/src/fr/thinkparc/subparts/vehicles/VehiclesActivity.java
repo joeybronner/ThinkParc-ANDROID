@@ -46,7 +46,6 @@ import fr.thinkparc.util.UtilitiesHTTP;
 
 public class VehiclesActivity extends Activity implements OnItemSelectedListener {
 
-	//EditText etResponse;
 	Spinner spinnerVehicles;
 	List<Vehicle> vehicles;
 	TextView tvSerialNr_val;
