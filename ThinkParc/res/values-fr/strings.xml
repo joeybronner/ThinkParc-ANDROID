@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ThinkParc</string>
+    <string name="title_activity_splash_screen">ThinkParc</string>
+    <string name="website"><u>http://www.think-parc.com</u></string>
+    <string name="type_software">Application Android</string>
+
+    <!-- Global -->
+    <string name="loading">Chargement&#8230;</string>
+    <string name="no_values">-</string>
+    <string name="date_pattern">JJ/MM/AAAA</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- Authentication view -->
+    <string name="authentication">Think-Parc | Authentification</string>
+    <string name="login">Login</string>
+    <string name="password">Mot de passe</string>
+    <string name="connect">Se connecter</string>
+    <string name="error_connection">Veuillez vérifier votre connexion internet.</string>
+    <string name="error_retrieving">Erreur pendant la récupération du token, veuillez réessayer.</string>
+    <string name="error">Erreur: </string>
+    <string name="error_incorrect">&#160;incorrect.</string>
+
+    <!-- Home Dashboard -->
+    <string name="stock">Stock</string>
+    <string name="vehicles">Vehicules</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="documents">Documents</string>
+    <string name="webbrowser">Ouvrir dans le navigateur</string>
+    <string name="backpress_logoff">Veuillez utiliser le bouton en bas à droite pour vous déconnecter.</string>
+
+    <!-- Vehicles Activity -->
+    <string name="action_gotowebsite">Ouvrir dans le navigateur</string>
+    <string name="title_activity_vehicles">Véhicules</string>
+    <string name="title_selectvehicle">Sélectionnez un vehicule</string>
+    <string name="title_serialnumber">Numéro de série</string>
+    <string name="title_buyingdate">Date d\u0027achat</string>
+    <string name="title_circulationdate">Date de mise en circulation</string>
+    <string name="title_brand">Marque</string>
+    <string name="title_model">Modèle</string>
+    <string name="title_mileage">Kilométrage</string>
+    <string name="title_energy">Energie</string>
+    <string name="title_state">Etat</string>
+    <string name="title_category">Catégorie</string>
+    <string name="title_buyingprice">Prix d\u0027achat</string>
+    <string name="title_equipments">Equipements</string>
+    <string name="title_site">Site</string>
+    <string name="title_commentary">Commentaire</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <!-- Maintenance Activity -->
+    <string name="title_activity_maintenance">Sélectionnez un véhicules</string>
+    <string name="title_activity_maintenance_stock">Sélectionnez une référence</string>
+    <string name="title_activity_maintenance_site">Sélectionnez une localisation</string>
+    <string name="quantity">Quantité</string>
+
+    <!-- Success view -->
+    <string name="success">Validé!</string>
+
+    <!-- Documents Activity -->
+    <string name="title_activity_documents">Documents</string>
+
+    <!-- Stock Activity -->
+    <string name="title_activity_stock">Menu Stock</string>
+    <string name="stock_addin">Ajouter au stock</string>
+    <string name="stock_search">Rechercher une référence</string>
+    <string name="title_activity_stock_search">Rechercher une référence</string>
+    <string name="title_activity_stock_add">Ajouter au stock</string>
+    <string name="stock_choosereference">Sélectionnez une référence</string>
+    <string name="stock_quantity">Quantité</string>
+    <string name="stock_enterquantity">Entrez une quantité</string>
+    <string name="stock_magasinnr">N° de magasin</string>
+    <string name="stock_entermagasinnr">Entrez un n° de magasin</string>
+    <string name="stock_driveway">Allée</string>
+    <string name="stock_enterdriveway">Entrez l\u0027allée</string>
+    <string name="stock_bay">Baie</string>
+    <string name="stock_enterbay">Entrez la baie</string>
+    <string name="stock_rack">Etagère</string>
+    <string name="stock_enterrack">Entrez l\u0027étagère</string>
+    <string name="stock_locker">Casier</string>
+    <string name="stock_enterlocker">Entrez le casier</string>
+    <string name="stock_position">Position</string>
+    <string name="stock_enterposition">Entrez la position</string>
+    <string name="stock_stockkind">Type de stock</string>
+    <string name="stock_storehouse">Entrepôt</string>
+    <string name="stock_enterstorehouse">Nom de l\u0027entrepôt</string>
+    <string name="stock_site">Site</string>
+    <string name="stock_addinstock">Ajouter au stock</string>
+    <string name="stock_btsearch">Rechercher!</string>
+    <string name="stock_available">Disponible</string>
+    <string name="stock_notavailable">Non disponible</string>
+    <string name="stock_error_fields">Vérifiez les valeurs que vous avez entré (elles doivent toutes être complétées)</string>
+    <string name="title_activity_stock_search_result">Disponibilité</string>
+
+</resources>
