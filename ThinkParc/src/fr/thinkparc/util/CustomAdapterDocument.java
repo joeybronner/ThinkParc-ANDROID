@@ -55,6 +55,7 @@ public class CustomAdapterDocument extends BaseAdapter implements OnClickListene
 	}
 
 	/* Get Data size (number of elements) */
+	@Override
 	public int getCount() {
 		if(data.size()<=0)
 			return 1;
@@ -62,11 +63,13 @@ public class CustomAdapterDocument extends BaseAdapter implements OnClickListene
 	}
 
 	/* Get an item */
+	@Override
 	public Object getItem(int position) {
 		return position;
 	}
 
 	/* Get an item ID */
+	@Override
 	public long getItemId(int position) {
 		return position;
 	}
@@ -76,6 +79,7 @@ public class CustomAdapterDocument extends BaseAdapter implements OnClickListene
 		public TextView tvFile;
 	}
 
+	@Override
 	@SuppressLint({ "InflateParams", "DefaultLocale" }) public View getView(int position, View convertView, ViewGroup parent) {
 		View documentrow = convertView;
 		ViewHolder holder;

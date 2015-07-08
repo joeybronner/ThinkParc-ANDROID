@@ -25,6 +25,13 @@ public class Utilities {
 		c.startActivity(intent);
 	}
 	
+	public static void openView(Context c, Class<?> cla, String id_part, String id_site) {
+		Intent intent = new Intent(c, cla);
+		intent.putExtra("id_part", id_part);
+		intent.putExtra("id_site", id_site);
+		c.startActivity(intent);
+	}
+	
 	public static void openView(Context c, Class<?> cla, String id_vehicle, String reference, int qt) {
 		Intent intent = new Intent(c, cla);
 		intent.putExtra("id_vehicle", id_vehicle);

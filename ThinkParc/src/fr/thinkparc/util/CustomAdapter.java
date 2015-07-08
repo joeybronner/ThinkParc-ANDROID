@@ -56,6 +56,7 @@ public class CustomAdapter extends BaseAdapter implements OnClickListener {
 	}
 
 	/* Get Data size (number of elements) */
+	@Override
 	public int getCount() {
 		if(data.size()<=0)
 			return 1;
@@ -63,11 +64,13 @@ public class CustomAdapter extends BaseAdapter implements OnClickListener {
 	}
 
 	/* Get an item */
+	@Override
 	public Object getItem(int position) {
 		return position;
 	}
 
 	/* Get an item ID */
+	@Override
 	public long getItemId(int position) {
 		return position;
 	}
@@ -78,6 +81,7 @@ public class CustomAdapter extends BaseAdapter implements OnClickListener {
 		public TextView tvQuantity;
 	}
 
+	@Override
 	@SuppressLint("InflateParams") public View getView(int position, View convertView, ViewGroup parent) {
 		View stockrow = convertView;
 		ViewHolder holder;

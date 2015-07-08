@@ -7,12 +7,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -20,6 +25,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 import fr.thinkparc.app.HomeActivity;
 import fr.thinkparc.app.R;
 import fr.thinkparc.obj.Measurement;
@@ -48,6 +54,17 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 	EditText etPosition;
 	EditText etStoreHouse;
 	int choice;
+	int quantity;
+	String id_measurement;
+	String driveway;
+	String bay;
+	String position;
+	String locker;
+	String rack;
+	String id_site;
+	String id_typestock;
+	String id_part;
+	String storehouse;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +91,7 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 		// Button Add listener
 		btAdd = (Button) findViewById(R.id.btAdd);
 		btAdd.setOnClickListener(new View.OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				addStock();
 			}
@@ -89,23 +107,63 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 	}
 
 	private void addStock() {
-		// 11 values
-		String quantity = etQuantity.getText().toString();
-		String id_measurement = getMeasurement(spinnerMeasurements.getSelectedItem().toString());
-		String driveway = etDriveway.getText().toString();
-		String bay = etBay.getText().toString();
-		String position = etPosition.getText().toString();
-		String locker = etLocker.getText().toString();
-		String rack = etRack.getText().toString();
-		String id_site = getSite(spinnerSites.getSelectedItem().toString());
-		String id_typestock = getTypeStock(spinnerKindStock.getSelectedItem().toString());
-		String id_part = getPart(spinnerReference.getSelectedItem().toString());
-		String storehouse = etStoreHouse.getText().toString();
 
-		// POST 
-		if(UtilitiesHTTP.isConnected((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))){
-			choice = 2;
-			new HttpAsyncTask().execute("http://www.think-parc.com/webservice/v1/companies/stocks/addinstock/quanty/" + quantity + "/id_measurement/" + id_measurement + "/driveway/" + driveway + "/bay/" + bay + "/position/" + position + "/locker/" + locker + "/rack/" + rack + "/id_site/" + id_site + "/id_typestock/" + id_typestock + "/id_part/" + id_part + "/storehouse/" + storehouse);
+		quantity = Integer.parseInt(etQuantity.getText().toString());
+		id_measurement = getMeasurement(spinnerMeasurements.getSelectedItem().toString());
+		driveway = etDriveway.getText().toString();
+		bay = etBay.getText().toString();
+		position = etPosition.getText().toString();
+		locker = etLocker.getText().toString();
+		rack = etRack.getText().toString();
+		id_site = getSite(spinnerSites.getSelectedItem().toString());
+		id_typestock = getTypeStock(spinnerKindStock.getSelectedItem().toString());
+		id_part = getPart(spinnerReference.getSelectedItem().toString());
+		storehouse = etStoreHouse.getText().toString().trim();
+
+		if (checkStockFieldsBeforeInsertion()) {
+			// POST 
+			if(UtilitiesHTTP.isConnected((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))){
+				choice = 2;
+				new HttpAsyncTask().execute("http://www.think-parc.com/webservice/v1/companies/stocks/addinstock/quanty/" + quantity + "/id_measurement/" + id_measurement + "/driveway/" + driveway + "/bay/" + bay + "/position/" + position + "/locker/" + locker + "/rack/" + rack + "/id_site/" + id_site + "/id_typestock/" + id_typestock + "/id_part/" + id_part + "/storehouse/" + storehouse);
+			}
+		} else {
+			Toast.makeText(this, getResources().getString(R.string.stock_error_fields), Toast.LENGTH_SHORT).show();
+		}
+	}
+
+	private boolean checkStockFieldsBeforeInsertion() {
+		try {
+
+			if (quantity < 1) {
+				return false;
+			}
+
+			if (driveway.equals("") || driveway.isEmpty()) {
+				return false;
+			}
+
+			if (bay.equals("") || bay.isEmpty()) {
+				return false;
+			}
+
+			if (position.equals("") || position.isEmpty()) {
+				return false;
+			}
+
+			if (locker.equals("") || locker.isEmpty()) {
+				return false;
+			}
+
+			if (rack.equals("") || rack.isEmpty()) {
+				return false;
+			}
+
+			if (storehouse.equals("") || storehouse.isEmpty()) {
+				return false;
+			}
+			return true;
+		} catch (Exception e) {
+			return  false;
 		}
 	}
 
@@ -117,7 +175,7 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 		}
 		return null;
 	}
-	
+
 	private String getMeasurement(String measurement) {
 		for (Measurement m : measurements) {
 			if (m.getMeasurement().equals(measurement)) {
@@ -166,7 +224,7 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 		// attaching data adapter to spinner
 		spinnerReference.setAdapter(dataAdapter);
 	}
-	
+
 	private void getAllMeasurements(String r) throws JSONException  {
 		// Spinner Drop down elements
 		measurements = new ArrayList<Measurement>();
@@ -214,9 +272,44 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 		spinnerSites.setAdapter(dataAdapter);
 	}
 
-	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-		// Get the selected vehicle
+	@SuppressLint("InflateParams")
+	private void showSuccess() {
+		// Show success message and redirect
+		LayoutInflater inflater = getLayoutInflater();
+		View dialoglayout = inflater.inflate(R.layout.success, null);
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+		builder.setView(dialoglayout);
+		builder.setCancelable(false);
+
+		// Close after X seconds
+		final AlertDialog success = builder.create();
+		success.show();
+
+		// Hide after some seconds
+		final Handler handler  = new Handler();
+		final Runnable runnable = new Runnable() {
+			@Override
+			public void run() {
+				if (success.isShowing()) {
+					success.dismiss();
+					Utilities.openView(StockAddActivity.this, HomeActivity.class);
+				}
+			}
+		};
+
+		success.setOnDismissListener(new DialogInterface.OnDismissListener() {
+			@Override
+			public void onDismiss(DialogInterface dialog) {
+				handler.removeCallbacks(runnable);
+			}
+		});
+
+		handler.postDelayed(runnable, 1500);
 	}
+
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) { /* Nothing */ }
 
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) { /* Not used. */ }
@@ -257,7 +350,7 @@ public class StockAddActivity extends Activity implements OnItemSelectedListener
 					getAllMeasurements(r3);
 					break;
 				case 2:
-					Utilities.openView(StockAddActivity.this, HomeActivity.class);
+					showSuccess();
 				}
 
 				progressDialog.dismiss();

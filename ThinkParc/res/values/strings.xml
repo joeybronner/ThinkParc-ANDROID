@@ -91,6 +91,10 @@
     <string name="stock_enterstorehouse">Enter the store house</string>
     <string name="stock_site">Site</string>
     <string name="stock_addinstock">Add in stock</string>
-    
+    <string name="stock_btsearch">Search!</string>
+    <string name="stock_available">Available</string>
+    <string name="stock_notavailable">Not available</string>
+    <string name="stock_error_fields">Please check your entries. One of them must probably be empty or in a wrong state.</string>
+    <string name="title_activity_stock_search_result">Availability</string>
 
 </resources>

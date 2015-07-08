@@ -60,10 +60,6 @@ public class AuthenticationActivity extends Activity {
 		username = (EditText) findViewById(R.id.etLogin);
 		password = (EditText) findViewById(R.id.etPassword);
 
-		// Temp (to delete!)
-		username.setText("shamzaoui");
-		password.setText("azerty");
-
 		connect = (Button) findViewById(R.id.btConnect);
 		connect.setBackgroundColor(getResources().getColor(R.color.light_blue));
 	}

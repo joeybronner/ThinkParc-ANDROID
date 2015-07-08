@@ -64,7 +64,7 @@ public class MaintenanceActivity extends ListActivity {
 		super.onListItemClick(l, v, position, id);
 	
 		// Get id_vehicle
-		String id_vehicle = (String) maintenances.get(position).getId_vehicle().toString();
+		String id_vehicle = maintenances.get(position).getId_vehicle().toString();
 		
 		// Here, load the id_maintenance
 		Utilities.openView(MaintenanceActivity.this, MaintenanceStockActivity.class, id_vehicle);
