@@ -15,6 +15,7 @@
     <application
         android:name="fr.thinkparc.util.LaunchApp"
         android:allowBackup="true"
+        android:largeHeap="true"
         android:icon="@drawable/logo_thinkparc"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
