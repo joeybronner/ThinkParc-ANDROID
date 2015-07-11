@@ -1,5 +1,28 @@
 package fr.thinkparc.subparts.stock;
 
+/* ======================================================================== *
+ *																			*
+ * @filename:		StockSearchResultActivity.java							*
+ * @description:	StockSearchResultActivity display the number of 		*
+ * 					references available in the stock for the selected 		*
+ * 					parts.													*
+ * 					reference values.										*
+ *																			*
+ * @author(s): 		Joey BRONNER											*
+ * @contact(s):		joeybronner@gmail.com									*
+ * @creation: 		01/07/2015												*
+ * @remarks:		-														*
+ * 																			*
+ * @rights:			Think-Parc Software ©, 2015.							*
+ *																			*
+ *																			*
+ * Date       | Developer      | Changes description						* 
+ * ------------------------------------------------------------------------ *
+ * 01/07/2015 | J.BRONNER      | Creation									*
+ * ------------------------------------------------------------------------ *
+ * JJ/MM/AAAA | ...			   | ...			 							*
+ * =========================================================================*/
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
