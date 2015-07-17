@@ -100,6 +100,7 @@ public class AuthenticationActivity extends Activity {
 					Constants.LOGIN = r.getString("login");
 					Constants.EMAIL = r.getString("email");
 					Constants.IMAGE = r.getString("image");
+					Constants.TOKEN = r.getString("token");
 					
 					Intent intent = new Intent(AuthenticationActivity.this, HomeActivity.class);
 					startActivity(intent);

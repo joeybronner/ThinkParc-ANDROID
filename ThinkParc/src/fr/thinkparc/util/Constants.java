@@ -11,5 +11,6 @@ public class Constants {
 	public static String LOGIN = "";
 	public static String EMAIL = "";
 	public static String IMAGE = "";
+	public static String TOKEN = "";
 	
 }

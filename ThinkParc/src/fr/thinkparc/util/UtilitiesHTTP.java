@@ -11,10 +11,12 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
+import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -41,16 +43,16 @@ public class UtilitiesHTTP {
 	}
 
 	public static String GET(String url){
-		InputStream inputStream = null;
 		String result = "";
 		try {
 			// Create HttpClient & Perform [GET] request
 			HttpClient httpclient = new DefaultHttpClient();
-			HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
-			inputStream = httpResponse.getEntity().getContent();
+			HttpGet get = new HttpGet(url);
+			get.setHeader("fct_token", Constants.TOKEN);
 
-			// Convert InputStream to String
-			result = convertInputStreamToString(inputStream);
+			// Handle response
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			return httpclient.execute(get, responseHandler);
 		} catch (Exception e) {
 			Log.d("InputStream", e.getLocalizedMessage());
 		}
@@ -87,17 +89,14 @@ public class UtilitiesHTTP {
 	public static String POST(String url) {
 		String res = "";
 		try {
-			// HttpClient
-			HttpClient httpClient = new DefaultHttpClient();
-			HttpPost httpPost = new HttpPost(url);
+			// Create HttpClient & Perform [POST] request
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpPost post = new HttpPost(url);
+			post.setHeader("fct_token", Constants.TOKEN);
 
-			// execute HTTP post request
-			HttpResponse response = httpClient.execute(httpPost);
-			HttpEntity resEntity = response.getEntity();
-
-			if (resEntity != null) {
-				res = EntityUtils.toString(resEntity).trim();
-			}
+			// Handle response
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			return httpclient.execute(post, responseHandler);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
@@ -105,13 +104,15 @@ public class UtilitiesHTTP {
 	}
 	
 	public static String PUT(String url) {
-		try {
-			// HttpClient
-			HttpClient httpClient = new DefaultHttpClient();
-			HttpPut httpPut = new HttpPut(url);
+		try {			
+			// Create HttpClient & Perform [PUT] request
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpPut put = new HttpPut(url);
+			put.setHeader("fct_token", Constants.TOKEN);
 
-			// execute HTTP post request
-			httpClient.execute(httpPut);
+			// Handle response
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			return httpclient.execute(put, responseHandler);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
